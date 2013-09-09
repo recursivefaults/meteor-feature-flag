@@ -18,14 +18,15 @@ This would look something like this
 Configuration
 -------------
 
-### Server
+### Meteor.settings
 The server is where most of the configuration for this lives. This, while
 slightly less convenient is a little safer to do.
 
 The feature flagging configuration should be stored
-Meteor.settings.featureFlag. That means that whenever you use this package, you
+`Meteor.settings.featureFlags`. That means that whenever you use this package, you
 should run Meteor with a settings file to actually have feature flagging work.
 
+### Feature Flag Handlers
 Now, by default we packaged a few simple feature flag options, but it's likely
 you may have some more application specific needs. So we created a way for you
 to add new ways to feature flag.
@@ -37,7 +38,7 @@ flagging. It accepts one parameter which is the json object representing those
 feature flags.
 
 For example, if you have a feature flag configuration that looks like this
-`featureFlags: { "adminWidget": {"users": "bob@loblaw.com"}}`
+`{featureFlags: { "adminWidget": {"users": "bob@loblaw.com"}}}`
 Then the handler will be called with the first parameter being populated with:
 `{"users": "bob@loblaw.com"}`
 
