@@ -69,7 +69,7 @@ if Meteor.isServer
         final = {}
         flags = Meteor.settings.featureFlags || {}
         for k, v of flags
-            final[k] = @FeatureFlag.featureFlag(k)
+            final[k] = FeatureFlag.featureFlag(k)
         return final
   )
   return FeatureFlag

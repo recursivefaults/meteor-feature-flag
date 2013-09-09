@@ -4,8 +4,8 @@ if Meteor.isClient
         if flags and flag of flags and flags[flag] == true
             options.fn(@)
     )
-    Deps.autorun() ->
-        if Meteor.userId()
+    Deps.autorun () ->
+        if Meteor.userId()?
             #Set your flagging
             Meteor.call('flagsForUser', (err, results) ->
                 Session.set('flags', results)
