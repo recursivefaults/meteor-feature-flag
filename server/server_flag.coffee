@@ -8,7 +8,6 @@ if Meteor.isServer
         val = flags[flagType]
         return false if !val?
         for identifier, handler of flagHandlers
-            console.log "#{identifier} says #{handler(val)}"
             return true if handler(val) == true
         return false
 
@@ -22,10 +21,13 @@ if Meteor.isServer
         user = Meteor.user()
         return false if !user?
         email = getEmail(user)
+        email = [email] if !_.isArray(email)
         return false if !email?
         filterset = if _.isArray(val.email_domains) then val.email_domains else [val.email_domains]
-        valid = (item for item in filterset when email.search(item) > 0)
-        if valid.length > 0 then return true else return false
+        for e in email
+            valid = (item for item in filterset when e.search(item) > 0)
+            return true if valid.length > 0
+        return false
     )
     ###
     # Add a feature flag for users based on email
