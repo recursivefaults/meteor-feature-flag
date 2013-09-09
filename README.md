@@ -46,3 +46,15 @@ It is your responsibility to verify that the type of feature flagging is valid
 for your handler. Only return true if you want your handler to enable that
 feature. Return false otherwise
 
+Included Feature Flagging Options
+---
+To get started, we included a couple of options to start feature flagging with.
+
+- `users` is  quite simply a user (identified by email) or an array of users.
+  If the currently logged in user is matched, the flag is enabled.
+
+- `email_domains` is a domain, or list of email domains (eg. `gmail.com`) that
+  will be matched agains the currenly logged in user's email addresses.
+
+- `true/false` is simply enabling or disabling a feature with a true or false
+  value.
