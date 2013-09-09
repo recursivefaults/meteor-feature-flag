@@ -19,9 +19,6 @@ Configuration
 -------------
 
 ### Meteor.settings
-The server is where most of the configuration for this lives. This, while
-slightly less convenient is a little safer to do.
-
 The feature flagging configuration should be stored
 `Meteor.settings.featureFlags`. That means that whenever you use this package, you
 should run Meteor with a settings file to actually have feature flagging work.
@@ -31,7 +28,7 @@ Now, by default we packaged a few simple feature flag options, but it's likely
 you may have some more application specific needs. So we created a way for you
 to add new ways to feature flag.
 
-To do this, you can call the `FeatureFlag.registerFeatureFlag` method which
+To do this, you can call the `FeatureFlag.registerFlagHandler` method which
 takes two parameters: `identifier` and `handler`. The identifier is just an
 internal identifier. The handler is the function that will actually do the
 flagging. It accepts one parameter which is the json object representing those
