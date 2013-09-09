@@ -1,0 +1,8 @@
+{
+    "name": "featureflag",
+    "description": "Simple configurable feature flagging.",
+    "homepage": "https://github.com/recursivefaults/meteor-feature-flag",
+    "author": "Ryan Latta",
+    "version": "0.1.0",
+    "git": "https://github.com/recursivefaults/meteor-feature-flag.git"
+}
