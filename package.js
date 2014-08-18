@@ -4,7 +4,7 @@ Package.describe({
 
 Package.on_use(function (api) {
     api.use('coffeescript', ['server', 'client']);
-    api.use(['deps','handlebars','jquery'], 'client');
+    api.use(['deps','ui','templating', 'jquery'], 'client');
     api.use('underscore', 'server');
     api.use('accounts-base', ['client'])
     api.add_files('server/server_flag.coffee', 'server')
