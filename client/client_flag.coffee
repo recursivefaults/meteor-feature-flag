@@ -1,8 +1,11 @@
 if Meteor.isClient
-    Handlebars.registerHelper('featureFlag', (flag,options) ->
+    UI.registerHelper('featureFlag', () ->
+        flag = @valueOf()
         flags = Session.get('flags')
         if flags and flag of flags and flags[flag] == true
-            options.fn(@)
+          Template._featureFlag
+        else
+          null
     )
     Deps.autorun () ->
         if Meteor.userId()?
