@@ -17,7 +17,7 @@ Package.on_use(function (api) {
 
 Package.on_test(function(api) {
     api.use('coffeescript', ['server', 'client']);
-    api.use(['meteor-feature-flag',"tinytest", "test-helpers"])
+    api.use(['feature-flag',"tinytest", "test-helpers"])
     api.use('underscore', 'server');
     api.add_files('test/feature_flag.coffee', 'server')
 });
