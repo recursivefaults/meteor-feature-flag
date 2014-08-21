@@ -8,8 +8,7 @@ if Meteor.isClient
           null
     )
     Deps.autorun () ->
-        if Meteor.userId()?
-            #Set your flagging
-            Meteor.call('flagsForUser', (err, results) ->
-                Session.set('flags', results)
-            )
+        #Set your flagging
+        Meteor.call('flagsForUser', (err, results) ->
+          Session.set('flags', results)
+        )
