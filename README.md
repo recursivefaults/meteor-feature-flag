@@ -57,3 +57,10 @@ To get started, we included a couple of options to start feature flagging with.
 
 - `true/false` is simply enabling or disabling a feature with a true or false
   value.
+
+Development
+---
+Run tests with
+```
+mrt test-packages ./
+```
