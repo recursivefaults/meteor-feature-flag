@@ -2,7 +2,7 @@
     "name": "feature-flag",
     "description": "Simple configurable feature flagging.",
     "homepage": "https://github.com/recursivefaults/meteor-feature-flag",
-    "author": "Ryan Latta",
-    "version": "0.2.0",
+    "author": "Ryan Latta <recursive.faults@gmail.com>",
+    "version": "0.2.1",
     "git": "https://github.com/recursivefaults/meteor-feature-flag.git"
 }
